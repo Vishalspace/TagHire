@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+ <data> </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/llsymbol"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:elevation="20dp"
+        android:background="@drawable/rounded_corner_button">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<!--        <TextView-->
+<!--            android:id="@+id/tvsymbol"-->
+<!--            android:text="Symbol"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="20dp"/>-->
+        <TextView
+            android:id="@+id/tvbaseAsset"
+            android:text="base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"/>
+        <TextView
+            android:id="@+id/tvlast"
+            android:text="last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"/>
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvbid"-->
+<!--            android:text="bid"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="20dp"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvask"-->
+<!--            android:text="ask"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="20dp"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvvolume"-->
+<!--            android:text="volume"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="20dp"/>-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal">-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvopen"-->
+<!--                android:text="open"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="10dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvlow"-->
+<!--                android:text="low"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="10dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvhigh"-->
+<!--                android:text="high"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="10dp"/>-->
+
+<!--        </LinearLayout>-->
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
