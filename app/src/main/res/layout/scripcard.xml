@@ -15,10 +15,12 @@
         android:id="@+id/llsymbol"
         android:orientation="vertical"
         android:elevation="10dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="4dp"
+        android:padding="8dp"
+        android:shadowColor="@color/material_dynamic_secondary0"
         android:onClick="@{currency.onClick}"
-        android:padding="4dp"
+        android:shadowRadius="8"
         android:background="@drawable/rounded_corner_button">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -100,6 +102,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -122,6 +125,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:gravity="right"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

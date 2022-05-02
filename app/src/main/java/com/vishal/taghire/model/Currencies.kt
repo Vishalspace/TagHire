@@ -14,7 +14,4 @@ data class Currency(
     @SerializedName("bidPrice") val bidPrice: String,
     @SerializedName("askPrice") val askPrice: String,
     @SerializedName("at") val at: Long,
-) {
-    @Transient
-    var expanded = false
-}
+)

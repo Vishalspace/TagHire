@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             .observeOn(AndroidSchedulers.mainThread())
             .doAfterTerminate { binding.swipeRefreshLayout.isRefreshing = false }
             .subscribe { result ->
-                adapter.setData(result)
+                adapter.submitList(result)
                 binding.tvat.text = convertLongToTime(result.first().at)
             }.addTo(compositeDisposable)
     }
