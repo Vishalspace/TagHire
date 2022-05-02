@@ -1,8 +1,9 @@
 # TagHire!
 
 1. Autoupdating prices every few seconds
-2. OnClick expand each item to show Open High and Low
-3. Swipe to Refresh
+2. Material 3 Ui
+3. OnClick expand each item to show Open High and Low
+4. Swipe to Refresh
 
 
 
