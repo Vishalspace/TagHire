@@ -1,7 +1,6 @@
 package com.vishal.taghire.ui
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.vishal.taghire.databinding.ScripcardBinding
@@ -16,17 +15,14 @@ class QuotesAdapter : RecyclerView.Adapter<QuotesAdapter.QuotesViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: QuotesViewHolder, position: Int) {
-//        holder.binding.tvsymbol.text = currencies[position].symbol
         holder.binding.tvbaseAsset.text = currencies[position].baseAsset
         holder.binding.tvlast.text = currencies[position].lastPrice.toString()
-//        holder.binding.tvquoteAsset.text = currencies[position].quoteAsset
-//        holder.binding.tvbid.text = currencies[position].bidPrice.toString()
-//        holder.binding.tvask.text = currencies[position].askPrice.toString()
-//        holder.binding.tvvolume.text = currencies[position].volume.toString()
-//        holder.binding.tvopen.text = currencies[position].openPrice.toString()
-//        holder.binding.tvlow.text = currencies[position].lowPrice.toString()
-//        holder.binding.tvhigh.text = currencies[position].highPrice.toString()
-//        holder.binding.tvat.text = currencies[position].at.toString()
+        holder.binding.tvbid.text = currencies[position].bidPrice.toString()
+        holder.binding.tvask.text = currencies[position].askPrice.toString()
+        holder.binding.tvvolume.text = currencies[position].volume.toString()
+        holder.binding.tvopen.text = currencies[position].openPrice.toString()
+        holder.binding.tvlow.text = currencies[position].lowPrice.toString()
+        holder.binding.tvhigh.text = currencies[position].highPrice.toString()
 
 //        val isExpanded = position === mExpandedPosition
 //        holder.details.setVisibility(if (isExpanded) View.VISIBLE else View.GONE)
