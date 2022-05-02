@@ -17,12 +17,12 @@ class QuotesAdapter : RecyclerView.Adapter<QuotesAdapter.QuotesViewHolder>(){
     override fun onBindViewHolder(holder: QuotesViewHolder, position: Int) {
         holder.binding.tvbaseAsset.text = currencies[position].baseAsset
         holder.binding.tvlast.text = currencies[position].lastPrice.toString()
-        holder.binding.tvbid.text = currencies[position].bidPrice.toString()
-        holder.binding.tvask.text = currencies[position].askPrice.toString()
-        holder.binding.tvvolume.text = currencies[position].volume.toString()
-        holder.binding.tvopen.text = currencies[position].openPrice.toString()
-        holder.binding.tvlow.text = currencies[position].lowPrice.toString()
-        holder.binding.tvhigh.text = currencies[position].highPrice.toString()
+//        holder.binding.tvbid.text = currencies[position].bidPrice.toString()
+//        holder.binding.tvask.text = currencies[position].askPrice.toString()
+//        holder.binding.tvvolume.text = currencies[position].volume.toString()
+//        holder.binding.tvopen.text = currencies[position].openPrice.toString()
+//        holder.binding.tvlow.text = currencies[position].lowPrice.toString()
+//        holder.binding.tvhigh.text = currencies[position].highPrice.toString()
 
 //        val isExpanded = position === mExpandedPosition
 //        holder.details.setVisibility(if (isExpanded) View.VISIBLE else View.GONE)
