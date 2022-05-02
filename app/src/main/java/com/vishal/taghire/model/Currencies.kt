@@ -6,12 +6,15 @@ data class Currency(
     @SerializedName("symbol") val symbol: String,
     @SerializedName("baseAsset") val baseAsset: String,
     @SerializedName("quoteAsset") val quoteAsset: String,
-    @SerializedName("openPrice") val openPrice: Double,
-    @SerializedName("lowPrice") val lowPrice: Double,
-    @SerializedName("highPrice") val highPrice: Double,
+    @SerializedName("openPrice") val openPrice: String,
+    @SerializedName("lowPrice") val lowPrice: String,
+    @SerializedName("highPrice") val highPrice: String,
     @SerializedName("lastPrice") val lastPrice: String,
     @SerializedName("volume") val volume: Double,
-    @SerializedName("bidPrice") val bidPrice: Double,
-    @SerializedName("askPrice") val askPrice: Double,
+    @SerializedName("bidPrice") val bidPrice: String,
+    @SerializedName("askPrice") val askPrice: String,
     @SerializedName("at") val at: Long,
-)
+) {
+    @Transient
+    var expanded = false
+}

@@ -1,7 +1,10 @@
 package com.vishal.taghire.ui
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableField
 import androidx.recyclerview.widget.RecyclerView
 import com.vishal.taghire.databinding.ScripcardBinding
 import com.vishal.taghire.model.Currency
@@ -15,14 +18,7 @@ class QuotesAdapter : RecyclerView.Adapter<QuotesAdapter.QuotesViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: QuotesViewHolder, position: Int) {
-        holder.binding.tvbaseAsset.text = currencies[position].baseAsset
-        holder.binding.tvlast.text = currencies[position].lastPrice
-//        holder.binding.tvbid.text = currencies[position].bidPrice.toString()
-//        holder.binding.tvask.text = currencies[position].askPrice.toString()
-//        holder.binding.tvvolume.text = currencies[position].volume.toString()
-        holder.binding.tvopen.text = currencies[position].openPrice.toString()
-        holder.binding.tvlow.text = currencies[position].lowPrice.toString()
-        holder.binding.tvhigh.text = currencies[position].highPrice.toString()
+        holder.binding.currency = CurrencyViewModel(currencies[position])
     }
 
     override fun getItemCount(): Int {
@@ -35,5 +31,18 @@ class QuotesAdapter : RecyclerView.Adapter<QuotesAdapter.QuotesViewHolder>(){
         notifyDataSetChanged()
     }
 
-    class QuotesViewHolder(val binding :ScripcardBinding): RecyclerView.ViewHolder(binding.root)
+    class QuotesViewHolder(val binding: ScripcardBinding) : RecyclerView.ViewHolder(binding.root)
+}
+
+class CurrencyViewModel(currency: Currency) {
+    val expanded = ObservableBoolean(false)
+    val baseAsset = ObservableField(currency.baseAsset)
+    val lastPrice = ObservableField(currency.lastPrice)
+    val openPrice = ObservableField(currency.openPrice)
+    val highPrice = ObservableField(currency.highPrice)
+    val lowPrice = ObservableField(currency.lowPrice)
+
+    fun onClick(_view: View?) {
+        expanded.set(!expanded.get())
+    }
 }
