@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="currency"
             type="com.vishal.taghire.ui.CurrencyViewModel" />
@@ -120,7 +119,6 @@
                         android:layout_marginLeft="3dp"
                         android:text="@{currency.highPrice}"
                         android:textSize="13sp" />
-
                 </LinearLayout>
 
                 <LinearLayout
