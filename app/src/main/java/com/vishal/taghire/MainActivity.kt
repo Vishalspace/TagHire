@@ -9,6 +9,7 @@ import com.vishal.taghire.api.WazirApi
 import com.vishal.taghire.databinding.ActivityMainBinding
 import com.vishal.taghire.ui.QuotesAdapter
 import com.vishal.taghire.utils.addTo
+import com.vishal.taghire.utils.convertLongToTime
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -33,7 +34,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initUi(binding: ActivityMainBinding) {
-        swipeRefresh = findViewById(R.id.swipeRefreshLayout)
+        swipeRefresh = binding.swipeRefreshLayout
+        binding.tvat.text = "Fetching data"
         binding.currencyrecycler.layoutManager = LinearLayoutManager(this)
         binding.currencyrecycler.adapter = adapter
     }
@@ -50,14 +52,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun callApi() {
-        if (swipeRefresh.isRefreshing) {
-            swipeRefresh.isRefreshing = false
-        }
         api.getQuotes()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
+            .doAfterTerminate { swipeRefresh.isRefreshing = false }
             .subscribe { result ->
                 adapter.setData(result)
+                binding.tvat.text = convertLongToTime(result.first().at)
             }.addTo(compositeDisposable)
     }
 
